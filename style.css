@@ -118,6 +118,13 @@ th, td
 	padding: 1rem;
 }
 
+#reload
+{
+	border-radius: 100%;
+	background-color: white;
+	border: none;
+}
+
 @keyframes coin-toss 
 {
 	0% {transform: scale3d(1, 1, 1) rotateX(var(--start-rot));}

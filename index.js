@@ -4,7 +4,8 @@ const	setButton = (str) =>
 
 	button.classList.remove("empire");
 	button.classList.remove("rebels");
-	button.classList.add(str);
+	if (str != "")
+		button.classList.add(str);
 }
 
 const	setCounter = (heads, tails) =>
@@ -82,4 +83,11 @@ const	coinToss = () =>
 	element.classList.remove('animation');
 	void element.offsetWidth;
 	element.classList.add('animation');
+}
+
+const	gameReload = () =>
+{
+	setCounter(0, 0);
+	setButton("");
+	setCoin(2);
 }
