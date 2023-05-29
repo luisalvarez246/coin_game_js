@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="style.css">
+	<script src="index.js"></script>
+	<title>Flip Coin</title>
+</head>
+<body class="board" onload="setCounter(0, 0)">
+	<figure class="coin">
+		<div class="coin-inner" id="inner">
+			<img class="coin-head" id="heads" src="./resources/imgs/Rebel_Alliance_logo.svg" alt="rebel-alliance-logo">
+			<img class="coin-tails" id="tails" src="./resources/imgs/Galactic_Empire_logo.svg" alt="galactic-empire-logo">
+		</div>
+	</figure>
+	<button class="btn" id="btn" onclick="coinToss()">Toss coin</button>
+	<table>
+		<tr>
+			<th>Rebels</th>
+			<th>Empire</th>
+		</tr>
+		<tr>
+			<td id="rebel-count"></td>
+			<td id="empire-count"></td>
+		</tr>
+	</table>
+</body>
+</html>

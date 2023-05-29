@@ -1,0 +1,126 @@
+:root
+{
+	--start-rot: 0deg;
+	--med-rot: 3600deg;
+	--end-rot: 7200deg;
+}
+
+.board
+{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	background-image: url("resources/imgs/bg.jpg");
+	height: 100vh;
+}
+
+.coin
+{
+	width: 5rem;
+	height: 5rem;
+}
+
+.coin-inner
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+}
+
+.coin-head, .coin-tails
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	border-radius: 50%;
+}
+
+.coin-head
+{
+	background-color: rgb(255, 246, 147);
+}
+
+.coin-tails
+{
+	transform: rotateX(180deg);
+	background-color: brown;
+}
+
+.animation
+{
+	animation-name: coin-toss;
+	animation-duration: 3s;
+}
+
+.hidden
+{
+	transform: rotateX(180deg);
+}
+
+.show
+{
+	transform: rotateX(0deg);
+}
+
+.btn
+{
+	border: none;
+	color: black;
+	padding: 1rem 1.3rem;
+	background-color: yellow;
+	border-radius: 1rem;
+}
+
+.btn:hover
+{
+	background-color: rgb(112, 112, 0);
+	color: white;
+}
+
+.rebels
+{
+	background-color: gold;
+}
+
+.rebels:hover
+{
+	background-color: antiquewhite;
+	color: black;
+}
+
+.empire
+{
+	background-color: brown;
+}
+
+.empire:hover
+{
+	background-color: red;
+}
+
+table, th, td
+{
+	border: 1px solid white;
+	color: white;
+	text-align: center;
+}
+
+table
+{
+	margin: 1rem;
+}
+
+th, td
+{
+	padding: 1rem;
+}
+
+@keyframes coin-toss 
+{
+	0% {transform: scale3d(1, 1, 1) rotateX(var(--start-rot));}
+	50% {transform: scale3d(2, 2, 2) rotateX(var(--med-rot));}
+	100% {transform: scale3d(1, 1, 1) rotateX(var(--end-rot));}
+}
