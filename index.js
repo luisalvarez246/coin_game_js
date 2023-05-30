@@ -50,7 +50,7 @@ const	startCounter = (nbr) =>
 	{
 		heads++;
 		setCounter(heads, tails);
-		playSound("chewy");
+		playSound("r2d2");
 		setButton("rebels");
 	}
 	else
@@ -64,7 +64,7 @@ const	startCounter = (nbr) =>
 
 const	playSound = (str) =>
 {
-	let	sound = new Audio(`./resources/sounds/${str}.mp3`)
+	let	sound = new Audio(`./resources/sounds/${str}.mp3`);
 	
 	sound.play();
 }
